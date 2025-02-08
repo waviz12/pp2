@@ -1,8 +1,15 @@
-def permutation(word):
-    for i in range(len(word)):
-        for j in range(len(word)):
-            print(word[j-i], end="")
-        print()
+def get_permutations(string):
+    if len(string) <= 1:
+        return [string]
+        
+    perms = []
+    for i, char in enumerate(string):
+        remaining = string[:i] + string[i+1:]
+        for p in get_permutations(remaining):
+            perms.append(char + p)
+    return perms
 
-word = str(input("Enter word: "))
-permutation(word)
+word = input("Enter a string: ")
+result = get_permutations(word)
+for perm in result:
+    print(perm)
