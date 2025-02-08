@@ -1,14 +1,25 @@
-#in  	Returns True if a sequence with the specified value is present in the object 	x in y
-x = ["apple", "banana"]
+#and---->Returns True if both statements are true 	x < 5 and  x < 10
+x = 5
 
-print("banana" in x)
-# returns True because a sequence with the value "banana" is in the list
+print(x > 3 and x < 10)
+'''returns True
+ because 5 is greater than 3 AND 5 is less than 10'''
 
 
 
+#or---->Returns True if one of the statements is true 	x < 5 or x < 4
+x = 5
 
-#not in 	Returns True if a sequence with the specified value is not present in the object 	x not in y
-x = ["apple", "banana"]
+print(x > 3 or x < 4) 
+""" returns True,
+because one of the conditions are true (5 is greater than 3, but 5 is not less than 4)
+"""
 
-print("pineapple" not in x)
-# returns True because a sequence with the value "pineapple" is not in the list
+
+
+#not------>Reverse the result, returns False if the result is true 	not(x < 5 and x < 10)
+x = 5
+
+print(not(x > 3 and x < 10)) 
+'''returns False 
+because not is used to reverse the result'''
