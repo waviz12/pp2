@@ -13,7 +13,11 @@ def is_prime(num):
     return True
 
 def filter_of_prime(numbers):
-    return [num for num in numbers if is_prime(num)]
+    result = []
+    for num in numbers:
+        if is_prime(num):
+            result.append(num)
+    return result
 
 print("Простые числа:", filter_of_prime(x))
 
